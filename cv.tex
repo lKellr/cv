@@ -10,10 +10,10 @@
 % Template license:
 % CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
 
-\documentclass[localFont]{yaac-another-awesome-cv} % ,alternative
+\documentclass[localFont,alternative,10pt,compact]{yaac-another-awesome-cv}
 \name{Leonhard}{Kellerer}
 \tagline{MSc Aerospace}
-\photo[shape=squircle]{2.5cm}{Passbild.png} % TODO: 
+\photo[squircle]{2.5cm}{Passbild.png} % TODO: 
 \socialinfo{
 	% \linkedin{christopheroger}
 	\github{lKellr}\\
@@ -23,14 +23,15 @@
 	\infos{Born 17th March 1998 (27 years) in Munich} % TODO:  (27 years) in Munich Munich/München?
 }
 
+% Uncomment the following line and use a value from 1.5cm to 2.5cm
+% \setleftcolumnlength{2.5cm}
+
+% Uncomment to add the bibliography (see section_publications.tex)
+% \addbibresource{my_publications.bib}
+
 \begin{document}
 
 \makecvheader
-
-% % Override default left column length of (2.5cm) (optional)
-% % Usage: \setleftcolumnlength{1.5cm} to change the left column lengtyh to 1.5cm
-% % I recommend to use a size between 1.5cm to 2.5cm
-% \setleftcolumnlength{1.5cm}
 
 \makecvfooter
 {\textsc{\today}} % \selectlanguage{english}\today
@@ -48,8 +49,9 @@
 \input{section_experience_short}		% Section expérience
 \input{section_languages}					% Section langues
 \input{section_education}				% Section scholarité
-%\input{section_interets}				% Section intérêts
+%\input{section_interests}				% Section intérêts
 \input{section_projects}
 \input{section_references} 				% Section références
+% \input{section_publications}			% Section publications
 
 \end{document}
