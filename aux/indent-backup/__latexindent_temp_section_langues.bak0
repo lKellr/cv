@@ -1,0 +1,28 @@
+% YAAC Another Awesome CV LaTeX Template
+%
+% This template has been downloaded from:
+% https://github.com/darwiin/yaac-another-awesome-cv
+%
+% Author:
+% Christophe Roger
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+
+%Section: Languages
+\twocolumnsection
+{\sectionTitle{languages}{\faGlobe}
+\begin{skills}
+	\skill{German}{}
+	\skill{English}{}
+	\skill{French}{}
+	\skill{Swedish}{}
+\end{skills}}
+{\sectionTitle{Forces}{\faPlus}
+\vspace{1em}
+\begin{itemize}
+	\item Passioné
+	\item Motivé                    
+    \item Autonome
+\end{itemize}
+}
