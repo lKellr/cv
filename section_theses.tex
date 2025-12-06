@@ -10,14 +10,33 @@
 % CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
 
 %Section: Project
-\sectionTitle{Projects}{\faLaptop}
+\sectionTitle{Theses}{\faBook} % \faLaptop
+% TODO: grades, long title in sc look shit
+% TODO: my ode code is a project which is relevant
 
 \begin{projects}
-	\project
-	{ODEsolvers}{2025}
-	{\website{ODEsolvers}{https://github.com/lKellr/ODEsolvers}}
-	{Python implementations of several solvers for ODEs. Main focus is on extrapolation methods, but (embedded) Runge-Kutta and multistep methods are available to provide efficiency comparisons.}
-	{Python, git}
+  \project
+  {A High-Order Matrix-Free CutFEM Approach for Parabolic Two-Phase Problems with Moving Interfaces}{2024 - 2025}
+  {Master's Thesis}
+  {}
+  % TODO: (High perfomance) matrix-free CutFEM code Cut, heat equation, moving interfaces, second phase and preconditioners (multigrid, Jacobi)
+  {FEM, deal.ii, C++, git}
+  % {}
+
+  \project
+  {Investigation of Reacting Shock-Bubble Interactions in JAX-Fluids}{2022}
+  {Term Paper}
+  {Development of the reactive flow submodule for the differentiable finite volume code JAX-Fluids. }
+  % TODO: temperature laws for transport properties, diffusive fluxes, reaction kinetics; Investigation [of ignition conditions] in the reactive shock-bubble interaction
+  {FV, Python, JAX, JAX-Fluids, git}
+  % {}
+
+  \project
+  {Analysis of Deep Reinforcement Learning Strategies for Implicit LES Modeling}{2020-2021}
+  {Bachelor's Thesis}
+  {Implementation of WENO finite-volume methods for the turbulent Burgers and Kuramoto-Sivashinsky equations. Control of stencil weights to achieve an optimal implicit turbulence model.}
+  {FV, RL, Python, PyTorch}
+  % {}
 
 \end{projects}
 

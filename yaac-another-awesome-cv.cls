@@ -437,12 +437,12 @@
 %                      <Experience description (Could be a list)>
 %                    }
 %                    {<Technology list>}
-\newcommand\experience[7]{
-  \textbf{#1}    & \textbf{#2, \textsc{#3}, #4}   								\\*
-  \textbf{#5}    & \begin{minipage}[t]{\rightcolumnlength}
-    #6
+\newcommand\experience[6]{
+  \textbf{#1}    & \textbf{#2, \textsc{#3}}   								\\*
+  \textbf{#4}    & \begin{minipage}[t]{\rightcolumnlength}
+    #5
   \end{minipage}										\\*
-  & \footnotesize{\foreach \n in {#7}{\cvtag{\n}}} 	\\
+  & \footnotesize{\foreach \n in {#6}{\cvtag{\n}}} 	\\
 }
 
 % Render a consultant experience in the experiences environment
