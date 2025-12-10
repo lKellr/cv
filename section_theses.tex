@@ -11,30 +11,29 @@
 
 %Section: Project
 \sectionTitle{Theses}{\faBook} % \faLaptop
-% TODO: grades, long title in sc look shit
-% TODO: my ode code is a project which is relevant
+% TODO: grades, long titles in sc look shit
 
 \begin{projects}
   \project
-  {A High-Order Matrix-Free CutFEM Approach for Parabolic Two-Phase Problems with Moving Interfaces}{2024 - 2025}
-  {Master's Thesis}
+  {A High-Order Matrix-Free CutFEM Approach for Parabolic Two-Phase Problems with\hfill\smallskip\\ Moving Interfaces}{2024--2025}
+  {Master's Thesis, Advisors: Maximilian Bergbauer, M.Sc.\ and Andreas Koch, M.Sc.}
   {}
   % TODO: (High perfomance) matrix-free CutFEM code Cut, heat equation, moving interfaces, second phase and preconditioners (multigrid, Jacobi)
-  {FEM, deal.ii, C++, git}
+  {FEM, C++, deal.ii, git} %  
   % {}
 
   \project
   {Investigation of Reacting Shock-Bubble Interactions in JAX-Fluids}{2022}
-  {Term Paper}
-  {Development of the reactive flow submodule for the differentiable finite volume code JAX-Fluids. }
-  % TODO: temperature laws for transport properties, diffusive fluxes, reaction kinetics; Investigation [of ignition conditions] in the reactive shock-bubble interaction
+  {Term Paper, Advisor: Deniz A. Bezgin, M.Sc.}
+  {Establishment of the reactive flow submodule for the differentiable finite volume code JAX-Fluids. Application to the reactive shock-bubble interaction case.}
+  % TODO: On the flow side, this comprised temperature laws for the transport properties, diffusive fluxes and a reactive source term incorporated via a splitting method.  reaction kinetics: parsing of mechanism files, source terms from the specified reactions, time integration, splitting; 
   {FV, Python, JAX, JAX-Fluids, git}
   % {}
 
   \project
-  {Analysis of Deep Reinforcement Learning Strategies for Implicit LES Modeling}{2020-2021}
-  {Bachelor's Thesis}
-  {Implementation of WENO finite-volume methods for the turbulent Burgers and Kuramoto-Sivashinsky equations. Control of stencil weights to achieve an optimal implicit turbulence model.}
+  {Analysis of Deep Reinforcement Learning Strategies for Implicit LES Modeling}{2020--2021}
+  {Bachelor's Thesis, Advisor: Deniz A. Bezgin, M.Sc.}
+  {Implementation of WENO finite-volume schemes for the turbulent Burgers and Kuramoto-Sivashinsky equations. Control of stencil weights by an RL-agent to achieve an optimal implicit turbulence model. }
   {FV, RL, Python, PyTorch}
   % {}
 

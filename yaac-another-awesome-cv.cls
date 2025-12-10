@@ -33,30 +33,30 @@
 \newif\if@isCompact   \@isCompactfalse
 
 \DeclareOption{green}{
-  \def\@green{green}
+	\def\@green{green}
 }
 
 \DeclareOption{red}{
-  \def\@red{red}
+	\def\@red{red}
 }
 
 \DeclareOption{indigo}{
-  \def\@indigo{indigo}
+	\def\@indigo{indigo}
 }
 \DeclareOption{orange}{
-  \def\@orange{orange}
+	\def\@orange{orange}
 }
 
 \DeclareOption{monochrome}{
-  \def\@monochrome{monochrome}
+	\def\@monochrome{monochrome}
 }
 
 \DeclareOption{localFont}{
-  \def\@local{local}
+	\def\@local{local}
 }
 
 \DeclareOption{alternative}{
-  \def\@alternative{alternate}
+	\def\@alternative{alternate}
 }
 
 \DeclareOption{showLinks}{ \@showLinkstrue}
@@ -90,17 +90,17 @@
 \definecolor{basecolor}{HTML}{000066}       %BLUE
 
 \ifundef{\@green} {
-  \ifundef{\@red} {
-    \ifundef{\@indigo}{
-      \ifundef{\@orange} {
-        \ifundef{\@monochrome} {}
-        { \definecolor{basecolor}{HTML}{000000}}
-      }
-      { \definecolor{basecolor}{HTML}{e68a00} }
-    }
-    { \definecolor{basecolor}{rgb}{0.2, 0.07, 0.48} }
-  }
-  { \definecolor{basecolor}{HTML}{b30000} }     %RED
+	\ifundef{\@red} {
+		\ifundef{\@indigo}{
+			\ifundef{\@orange} {
+				\ifundef{\@monochrome} {}
+				{ \definecolor{basecolor}{HTML}{000000}}
+			}
+			{ \definecolor{basecolor}{HTML}{e68a00} }
+		}
+		{ \definecolor{basecolor}{rgb}{0.2, 0.07, 0.48} }
+	}
+	{ \definecolor{basecolor}{HTML}{b30000} }     %RED
 }
 { \definecolor{basecolor}{rgb}{0.0, 0.62, 0.38} }
 
@@ -114,14 +114,14 @@
 %\definecolor{linkcolour}{rgb}{0,0.2,0.6}
 
 \if@showLinks
-  \hypersetup{%
-    breaklinks
-  }%
+	\hypersetup{%
+		breaklinks
+	}%
 \else
-  \hypersetup{%
-    pdfborder = {0 0 0},
-    breaklinks
-  }%
+	\hypersetup{%
+		pdfborder = {0 0 0},
+		breaklinks
+	}%
 \fi
 
 % Setup fancyhdr package
@@ -156,16 +156,16 @@
 % Define font to use according to localFont option
 \ifundef{\@local}
 {
-  %\setmainfont[BoldFont = Helvetica Neue, ItalicFont=Helvetica Neue Thin Italic ,SmallCapsFont = Helvetica Neue Light]{Helvetica Neue Thin}
-  \setmainfont{Source Sans Pro Light}[
-    BoldFont = SourceSansPro-Regular,
-    ItalicFont= Source Sans Pro Light Italic]
+	%\setmainfont[BoldFont = Helvetica Neue, ItalicFont=Helvetica Neue Thin Italic ,SmallCapsFont = Helvetica Neue Light]{Helvetica Neue Thin}
+	\setmainfont{Source Sans Pro Light}[
+		BoldFont = SourceSansPro-Regular,
+		ItalicFont= Source Sans Pro Light Italic]
 }
 {
-  \setmainfont{SourceSansPro-Light}[
-    Path = fonts/,
-    BoldFont = SourceSansPro-Regular,
-    ItalicFont = SourceSansPro-LightIt]
+	\setmainfont{SourceSansPro-Light}[
+		Path = fonts/,
+		BoldFont = SourceSansPro-Regular,
+		ItalicFont = SourceSansPro-LightIt]
 }
 
 %New length definition
@@ -183,8 +183,8 @@
 % Override default left column length of (2.5cm)
 % Usage: \setleftcolumnlength{<length>}
 \newcommand{\setleftcolumnlength}[1]{
-  \setlength{\leftcolumnlength}{#1}
-  \setlength{\rightcolumnlength}{\dimexpr(\fulllength-\leftcolumnlength)\relax}
+	\setlength{\leftcolumnlength}{#1}
+	\setlength{\rightcolumnlength}{\dimexpr(\fulllength-\leftcolumnlength)\relax}
 }
 
 % Font Awesome icons aliases
@@ -207,7 +207,7 @@
 % Create a tag
 % Usage: \cvtag{<tag label>}
 \newcommand{\cvtag}[1]{%
-  \tikz[baseline]\node[anchor=base,draw=darkGrey!70,rounded corners=0.5ex,inner xsep=1ex,inner ysep =0.55ex,text height=1.3ex,text depth=.25ex]{#1};
+	\tikz[baseline]\node[anchor=base,draw=darkGrey!70,rounded corners=0.5ex,inner xsep=1ex,inner ysep =0.55ex,text height=1.3ex,text depth=.25ex]{#1};
 }
 
 % Render author's name
@@ -292,14 +292,14 @@
 
 % Render author's tagline
 \newcommand\resumetitle[1]{
-  \ifundef{\@alternative}{
-    \par{
-      \bigskip\center{\Large \color{accentcolor}\textbf{#1}\color{Black}}\par
-    }
-    \bigskip
-  }{
-    \color{accentcolor}\textbf{\large{#1}}\color{black}
-  }
+	\ifundef{\@alternative}{
+		\par{
+			\bigskip\center{\Large \color{accentcolor}\textbf{#1}\color{Black}}\par
+		}
+		\bigskip
+	}{
+		\color{accentcolor}\textbf{\large{#1}}\color{black}
+	}
 }
 
 \newcommand\idphoto{
@@ -331,46 +331,46 @@
 \newcommand*{\makecvheader}{
 \ifundef{\@alternative}{
 \ifundef{\@photodiameter}{
-  \begin{minipage}{\linewidth}
+	\begin{minipage}{\linewidth}
 }{
-  \begin{minipage}{\dimexpr\linewidth-\@photodiameter-2em}
-    }
-    \color{accentcolor}\user{\@firstname}{\@lastname}\color{black}\\
-    \small{\@socialinfo}
-  \end{minipage}
-  \ifdef{\@photodiameter}{
-    \begin{minipage}{\@photodiameter}
-      \idphoto
-    \end{minipage}
-  }{}
-  \resumetitle{\@tagline}
+	\begin{minipage}{\dimexpr\linewidth-\@photodiameter-2em}
+		}
+		\color{accentcolor}\user{\@firstname}{\@lastname}\color{black}\\
+		\small{\@socialinfo}
+	\end{minipage}
+	\ifdef{\@photodiameter}{
+		\begin{minipage}{\@photodiameter}
+			\idphoto
+		\end{minipage}
+	}{}
+	\resumetitle{\@tagline}
 }{
-  \ifundef{\@photodiameter}{
-    \begin{minipage}{\linewidth}
-  }{
-    \begin{minipage}{\dimexpr\linewidth-\@photodiameter-2em}
-      }
-      \user{\@firstname}{\@lastname}\\
-      \resumetitle{\@tagline}
-      \smallskip\\
-      \small{\@socialinfo}
-    \end{minipage}
-    \ifdef{\@photodiameter}{
-      \begin{minipage}{\@photodiameter}
-        \idphoto
-      \end{minipage}
-    }{}
-    \bigskip
-  }
+	\ifundef{\@photodiameter}{
+		\begin{minipage}{\linewidth}
+	}{
+		\begin{minipage}{\dimexpr\linewidth-\@photodiameter-2em}
+			}
+			\user{\@firstname}{\@lastname}\\
+			\resumetitle{\@tagline}
+			\smallskip\\
+			\small{\@socialinfo}
+		\end{minipage}
+		\ifdef{\@photodiameter}{
+			\begin{minipage}{\@photodiameter}
+				\idphoto
+			\end{minipage}
+		}{}
+		\bigskip
+	}
 }
 
 % Define a footer for CV
 % Usage: \makecvfooter{<left>}{<center>}{<right>}
 \newcommand*{\makecvfooter}[3]{%
-  \fancyfoot{}
-  \fancyfoot[L]{#1}
-  \fancyfoot[C]{#2}
-  \fancyfoot[R]{#3}
+	\fancyfoot{}
+	\fancyfoot[L]{#1}
+	\fancyfoot[C]{#2}
+	\fancyfoot[R]{#3}
 }
 
 % Resume part title definition
@@ -378,17 +378,17 @@
 
 % Define the 'keywords' environment
 \newenvironment{keywords}{%
-  \renewcommand{\arraystretch}{1.1}
+	\renewcommand{\arraystretch}{1.1}
 
-  \begin{tabular}{>{}r>{}p{13cm}}
-    }{%
-  \end{tabular}
+	\begin{tabular}{>{}r>{}p{13cm}}
+		}{%
+	\end{tabular}
 }
 
 % Render a scholarshipentry in the scolarship environment
 % Usage: \scholarshipentry{<date>}{<description>}
 \newcommand\keywordsentry[2]{
-  \textbf{#1} &   #2\\
+	\textbf{#1} &   #2\\
 }
 
 % Define a new column type for the scholarship environment
@@ -396,37 +396,37 @@
 
 % Define the 'scholarship' environment
 \newenvironment{scholarship}{%
-  \begin{tabular}{Y p{\rightcolumnlength}}
-    }{%
-  \end{tabular}
+	\begin{tabular}{Y p{\rightcolumnlength}}
+		}{%
+	\end{tabular}
 }
 
 % Render a scholarshipentry in the scolarship environment
 % Usage: \scholarshipentry{<date>}{<description>}
 \newcommand\scholarshipentry[2]{
-  #1    &  #2 \\
+	#1    &  #2 \\
 }
 
 % Define the 'skills' environment
 \newenvironment{skills}{%
-  \begin{longtable}{R{\leftcolumnlength}p{\rightcolumnlength}}
-    }{%
-  \end{longtable}
+	\begin{longtable}{R{\leftcolumnlength}p{\rightcolumnlength}}
+		}{%
+	\end{longtable}
 }
 
 % Render a skill in the skills environment
 % Usage: \skill{<skill>}{<level>}
 \newcommand\skill[2]{
-  \textbf{#1}    & \foreach \x in {1,...,5}{{\color{accentcolor!80} \ifnumgreater{\x}{#2}{\faCircle[regular]}{\faCircle}}\enspace } \\
+	\textbf{#1}    & \foreach \x in {1,...,5}{{\leavevmode\color{accentcolor!80} \ifnumgreater{\x}{#2}{\faCircle[regular]}{\faCircle}}\enspace } \\
 }
 
 \newcolumntype{E}{>{\raggedright\arraybackslash}p{\rightcolumnlength}}
 
 % Define the 'experiences' environment
 \newenvironment{experiences}{%
-  \begin{longtable}{R{\leftcolumnlength}|E}
-    }{%
-  \end{longtable}
+	\begin{longtable}{R{\leftcolumnlength}|E}
+		}{%
+	\end{longtable}
 }
 
 % Render an experience in the experiences environment
@@ -438,11 +438,11 @@
 %                    }
 %                    {<Technology list>}
 \newcommand\experience[6]{
-  \textbf{#1}    & \textbf{#2, \textsc{#3}}   								\\*
-  \textbf{#4}    & \begin{minipage}[t]{\rightcolumnlength}
-    #5
-  \end{minipage}										\\*
-  & \footnotesize{\foreach \n in {#6}{\cvtag{\n}}} 	\\
+	\textbf{#1}    & \textbf{#2, \textsc{#3}}   								\\*
+	\textbf{#4}    & \begin{minipage}[t]{\rightcolumnlength}
+		#5
+	\end{minipage}										\\*
+	& \footnotesize{\foreach \n in {#6}{\cvtag{\n}}} 	\\
 }
 
 % Render a consultant experience in the experiences environment
@@ -455,26 +455,26 @@
 %                    }
 %                    {<Technology list>}
 \newcommand\consultantexperience[9]{
-  \textbf{#1}    & \textbf{#2, \textsc{#3}, #4}   								\\*
-  \textbf{#5}    & \emph{#6} pour \textsc{#7}                       				\\*
-  & \begin{minipage}[t]{\rightcolumnlength}
-    #8
-  \end{minipage}										\\*
-  & \footnotesize{\foreach \n in {#9}{\cvtag{\n}}} 	\\
+	\textbf{#1}    & \textbf{#2, \textsc{#3}, #4}   								\\*
+	\textbf{#5}    & \emph{#6} pour \textsc{#7}                       				\\*
+	& \begin{minipage}[t]{\rightcolumnlength}
+		#8
+	\end{minipage}										\\*
+	& \footnotesize{\foreach \n in {#9}{\cvtag{\n}}} 	\\
 }
 
 % Define the empty separator macro with different spacing according to document class option 'compact'
 \if@isCompact
-  \newcommand\emptySeparator{\multicolumn{2}{c}{}\\[-0.6em]}
+	\newcommand\emptySeparator{\multicolumn{2}{c}{}\\[-0.6em]}
 \else
-  \newcommand\emptySeparator{\multicolumn{2}{c}{}\\}
+	\newcommand\emptySeparator{\multicolumn{2}{c}{}\\}
 \fi
 
 % Define the 'projects' environment
 \newenvironment{projects}{%
-  \begin{longtable}{l}
-    }{%
-  \end{longtable}
+	\begin{longtable}{l}
+		}{%
+	\end{longtable}
 }
 
 % Define the 'project' entry in the 'projects' environment
@@ -485,58 +485,66 @@
 %   {<Project description>}
 %   {<techno1>,<techno2>}
 \newcommand\project[5]{
-  \begin{minipage}[t]{\dimexpr(\linewidth) - 1.5em}
-    \textbf{\textsc{#1}} \hfill \textsc{#2}\smallskip\\
-    #3\\
-    #4\smallskip\\
-    \footnotesize{\foreach \n in {#5}{\cvtag{\n}}}\\
-  \end{minipage}
-  \\*
+	\begin{minipage}[t]{\dimexpr(\linewidth) - 1.5em}
+		\textbf{\textsc{#1}} \hfill \textsc{#2}\smallskip\\
+		\textit{#3}\\
+		#4\smallskip\\
+		\footnotesize{\foreach \n in {#5}{\cvtag{\n}}}\\
+	\end{minipage}
+	\\*
 }
+% \newcommand\projectshort[3]{
+%   \begin{minipage}[t]{\dimexpr(\linewidth) - 1.5em}
+%     \textbf{\textsc{#1}} \hfill \textsc{#2}\smallskip\\
+%     #3\smallskip\\
+%     \footnotesize{\foreach \n in {}{\cvtag{\n}}}\\
+%   \end{minipage}
+%   \\*
+% }
 
 \newcommand*\twocolumnsection[2]{
-  \begin{minipage}[t]{\dimexpr(\linewidth/2) - 3em}
-    #1
-  \end{minipage}
-  \hfill
-  \begin{minipage}[t]{\dimexpr(\linewidth/2) - 3em}
-    #2
-  \end{minipage}
+	\begin{minipage}[t]{\dimexpr(\linewidth/2) - 3em}
+		#1
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{\dimexpr(\linewidth/2) - 3em}
+		#2
+	\end{minipage}
 }
 
 % Define the 'referencees' environment
 \newenvironment{referees}{%
 }{%
-  \hfill
-  \bigskip
+	\hfill
+	\bigskip
 }
 
 \newcommand*\referee[5]{
-  \hspace{1em}
-  \begin{minipage}[t]{\dimexpr(\linewidth/3) - 3em}
-    \begin{tabular}{>{}l >{}l}
-      \multicolumn{2}{l}{\textbf{#1}}            \\
-      \multicolumn{2}{l}{\emph{#2}, \textsc{#3}} \\
-      \quad \mailSymbol & \href{mailto:#4}{#4}   \\
-      \quad \faPhone    & #5                     \\
-    \end{tabular}
-  \end{minipage}%
+	\hspace{1em}
+	\begin{minipage}[t]{\dimexpr(\linewidth/3) - 3em}
+		\begin{tabular}{>{}l >{}l}
+			\multicolumn{2}{l}{\textbf{#1}}            \\
+			\multicolumn{2}{l}{\emph{#2}, \textsc{#3}} \\
+			\quad \mailSymbol & \href{mailto:#4}{#4}   \\
+			\quad \faPhone    & #5                     \\
+		\end{tabular}
+	\end{minipage}%
 }
 
 \newcommand*\refereeMailOnly[4]{
-  \hspace{1em}
-  \begin{minipage}[t]{\dimexpr(\linewidth/3) - 3em}
-    \begin{tabular}{>{}l >{}l}
-      \multicolumn{2}{l}{\textbf{#1}}            \\
-      \multicolumn{2}{l}{\emph{#2}, \textsc{#3}} \\
-      \quad \mailSymbol & \href{mailto:#4}{#4}   \\
-    \end{tabular}
-  \end{minipage}%
+	\hspace{1em}
+	\begin{minipage}[t]{\dimexpr(\linewidth/3) - 3em}
+		\begin{tabular}{>{}l >{}l}
+			\multicolumn{2}{l}{\textbf{#1}}            \\
+			\multicolumn{2}{l}{\emph{#2}, \textsc{#3}} \\
+			\quad \mailSymbol & \href{mailto:#4}{#4}   \\
+		\end{tabular}
+	\end{minipage}%
 }
 
 % Define the 'publications' environment
 \newenvironment{publications}{%
-  \vspace{5pt}
+	\vspace{5pt}
 }
 
 %% Bibliography
@@ -558,5 +566,5 @@
 \defbibheading{subbibliography}{\vskip 5pt {\@subbibfont\hspace{0pt}#1}\par}
 
 \defbibfilter{booksandchapters}{%
-  ( type=book or type=incollection )
+	( type=book or type=incollection )
 }
