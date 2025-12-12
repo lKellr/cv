@@ -12,48 +12,34 @@
 %Section: Project
 \sectionTitle{Theses}{\faBook} % \faLaptop
 % TODO: grades, long titles in sc look shit
+% TODO: the short-listers are unlikely to be experts in your field
 
 \begin{projects}
-  \project
-  {A High-Order Matrix-Free CutFEM Approach for Parabolic Two-Phase Problems with\hfill\smallskip\\ Moving Interfaces}{2024--2025}
-  {Master's Thesis, Advisors: Maximilian Bergbauer, M.Sc.\ and Andreas Koch, M.Sc.}
-  {}
-  % TODO: (High perfomance) matrix-free CutFEM code Cut, heat equation, moving interfaces, second phase and preconditioners (multigrid, Jacobi)
-  {FEM, C++, deal.ii, git} %  
+  \project%
+  {A High-Order Matrix-Free CutFEM Approach for Parabolic Two-Phase Problems with\hfill\\ Moving Interfaces}{2024--2025}
+  {Master's Thesis, Advisors: Maximilian Bergbauer, MSc and Andreas Koch, MSc}
+  {Development of a matrix-free CutFEM scheme for the two-phase heat equation, with special focus on the interface movement at high polynomial order. Implemented in the deal.II-based framework \emph{Cut}.}
+  % Graded 1.0
+  %{FEM, C++, deal.ii, git} %  
   % {}
 
-  \project
+  \project%
   {Investigation of Reacting Shock-Bubble Interactions in JAX-Fluids}{2022}
-  {Term Paper, Advisor: Deniz A. Bezgin, M.Sc.}
-  {Establishment of the reactive flow submodule for the differentiable finite volume code JAX-Fluids. Application to the reactive shock-bubble interaction case.}
-  % TODO: On the flow side, this comprised temperature laws for the transport properties, diffusive fluxes and a reactive source term incorporated via a splitting method.  reaction kinetics: parsing of mechanism files, source terms from the specified reactions, time integration, splitting; 
-  {FV, Python, JAX, JAX-Fluids, git}
+  {Term Paper, Advisor: Deniz A.\ Bezgin, MSc}
+  {Establishment of the reactive flow module (multiple components, diffusive fluxes, transport and thermodynamic properties, chemical kinetics solver) for the differentiable finite volume code \emph{JAX-Fluids}. Evaluation in the reactive shock-bubble interaction case.}
+  % On the flow side, this comprised diffusive fluxes and temperature laws for the transport properties (+thermodynamic properties). The reactive source term was parsed from mechanism files, integrated and incorporated via a splitting method.
+  % reactive flow submodule (diffusive fluxes, temperature laws, reactive source term)
+  % This entailed the development of a chemical kinetics solver.
+  % Graded 1.0
+  % {FV, Python, JAX, JAX-Fluids, git}
   % {}
 
-  \project
+  \project%
   {Analysis of Deep Reinforcement Learning Strategies for Implicit LES Modeling}{2020--2021}
-  {Bachelor's Thesis, Advisor: Deniz A. Bezgin, M.Sc.}
+  {Bachelor's Thesis, Advisor: Deniz A.\ Bezgin, MSc}
   {Implementation of WENO finite-volume schemes for the turbulent Burgers and Kuramoto-Sivashinsky equations. Control of stencil weights by an RL-agent to achieve an optimal implicit turbulence model. }
-  {FV, RL, Python, PyTorch}
+  %{FV, RL, Python, PyTorch}
+  % Graded 1.0
   % {}
 
 \end{projects}
-
-%\sectionTitle{Projets}{\faLaptop}
-%\twocolumnsection{
-%	\begin{projects}
-%		\project
-%			{YAAC Another Awesome CV}{2013 - 2018}
-%			{\github{darwiin/yaac-another-awesome-cv} }
-%			{Template \LaTeX pour la réalisation de Curiculum Vitæ qui utilise \href{https://fontawesome.com}{Font Awesome} et la police de caractère Adobe Source.}
-%		{\LaTeX,Sublime Text}
-%	\end{projects}
-%}
-%{\begin{projects}
-%	\project
-%	{Simply City}{2017 - 2018}
-%	{\github{darwiin} \website{https://www.simplycity.nc}{https://www.simplycity.nc}}
-%	{Igitur nam locis plane homines quidem et locis dicit quot quidem quod fallare si sed satisfacit intellegam et falli dicit mihi igitur possumus locis admodum eloquentiam vult et non admodum complectitur quod intellegam et intellegam complectitur et tamen philosopho quidem si vult igitur locis falli ego non philosophi habeat Torquate et non inquam pluribus asperner verbis dicit igitur sententiae locis non si sententiae oratio et non quot aeque habeat non homines habeat si inquam quod ego istius istius quidem ego pluribus aeque oratio non quidem pluribus verbis si igitur tamen nam istius vult non tot istius et ego non non.}
-%	{DB2,Eclipse,Infosphere Traceability Server}
-%	\end{projects}
-%}
