@@ -58,6 +58,9 @@
 \DeclareOption{alternative}{
 	\def\@alternative{alternate}
 }
+\DeclareOption{noicons}{
+	\def\@noicons{noicons}
+}
 
 \DeclareOption{showLinks}{ \@showLinkstrue}
 \DeclareOption{compact}{ \@isCompacttrue}
@@ -67,13 +70,16 @@
 % Dependences
 %A Few Useful Packages
 \RequirePackage[english,french]{babel}
+\RequirePackage{csquotes}
 \RequirePackage[utf8]{luainputenc}
 \RequirePackage{fontspec} 					                 % for loading fonts
+\RequirePackage{microtype}
 \RequirePackage{url,parskip} 	    % other packages for formatting
 \RequirePackage[usenames,dvipsnames]{xcolor}
 \RequirePackage{fullpage}
 \RequirePackage[margin=1.5cm]{geometry}
-\RequirePackage[fixed]{fontawesome5}
+% \RequirePackage[fixed]{fontawesome5}
+\RequirePackage[fixed]{fontawesome7}
 \RequirePackage{hyperref}
 \RequirePackage{titlesec}
 \RequirePackage{array}
@@ -136,7 +142,7 @@
 %\font\fb=''[cmr10]''                      % for use with \LaTeX command
 
 % Setup CV sections
-\titleformat{\section}{\Large\raggedright}{}{0em}{}[\titlerule]
+\titleformat{\section}{\Large\raggedright }{}{0em}{}[\titlerule]
 \titlespacing{\section}{0pt}{2pt}{2pt}
 
 % Configure list
@@ -156,10 +162,11 @@
 % Define font to use according to localFont option
 \ifundef{\@local}
 {
-	%\setmainfont[BoldFont = Helvetica Neue, ItalicFont=Helvetica Neue Thin Italic ,SmallCapsFont = Helvetica Neue Light]{Helvetica Neue Thin}
-	\setmainfont{Source Sans Pro Light}[
-		BoldFont = SourceSansPro-Regular,
-		ItalicFont= Source Sans Pro Light Italic]
+	% \setmainfont[BoldFont = Helvetica Neue, ItalicFont=Helvetica Neue Thin Italic ,SmallCapsFont = Helvetica Neue Light]{Helvetica Neue Thin}
+	\setmainfont{Tex Gyre Heros}
+	% \setmainfont{Source Sans Pro Light}[
+	% 	BoldFont = SourceSansPro-Regular,
+	% 	ItalicFont= Source Sans Pro Light Italic]
 }
 {
 	\setmainfont{SourceSansPro-Light}[
@@ -189,11 +196,11 @@
 
 % Font Awesome icons aliases
 \newcommand{\mailSymbol}{\faAt}
-\newcommand{\locationSymbol}{\faMapMarker*}
+\newcommand{\locationSymbol}{\faLocationDot}
 \newcommand{\infoSymbol}{\faInfo}
 \newcommand{\linkedinSymbol}{\faLinkedinIn}
 \newcommand{\viadeoSymbol}{\faViadeo}
-\newcommand{\mobileSymbol}{\faMobile*}
+\newcommand{\mobileSymbol}{\faMobileRetro}
 \newcommand{\githubSymbol}{\faGithub}
 \newcommand{\stackoverflowSymbol}{\faStackOverflow}
 \newcommand{\stackexchangeSymbol}{\faStackExchange}
@@ -374,7 +381,12 @@
 }
 
 % Resume part title definition
-\newcommand\sectionTitle[2]{\section{\texorpdfstring{\color{accentcolor}#2\enspace \textsc{#1}}{#1}}}
+\ifundef{\@noicon}{
+	\newcommand\sectionTitle[2]{\section{\texorpdfstring{\color{accentcolor}#2\enspace \textsc{#1}}{#1}}}
+}
+{
+	\newcommand\sectionTitle[2]{\section{\texorpdfstring{\color{accentcolor}\textsc{#1}}{#1}}}
+}
 
 % Define the 'keywords' environment
 \newenvironment{keywords}{%
