@@ -10,17 +10,18 @@
 % Template license:
 % CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
 
-\documentclass[localFont,indigo,alternative,10pt,compact]{yaac-another-awesome-cv}
+\documentclass[localFont,alternative,noicons, compact,11pt]{yaac-another-awesome-cv} % localFont, noicons, compact
+% \documentclass[alternative,11pt,noicons]{yaac-another-awesome-cv} % localFont, noicons, compact
 \name{Leonhard}{Kellerer}
 \tagline{MSc Aerospace}
 % \photo[squircle]{2.5cm}{Passbild.png}
-\socialinfo{
-	% \linkedin{christopheroger}
+\socialinfo{%
+	% \linkedin{}
 	\github{lKellr}\\
 	% \website{LeosProjectArchive}{lkellr.github.io/LeosProjectArchive}\\
-	\smartphone{+49 1573 1439477}  % +49 15 73 143 94 77
+	\smartphone{+49~1573~1439~477}  % +49 15 73 143 94 77
 	\email{l.kellerer@tum.de}\\
-	\address{Buschingstraße 63, 81677, München}\\
+	\address{Buschingstraße 63, 81677, Munich}\\
 	\infos{Born 17th March 1998 (27 years) in Munich}
 }
 
@@ -36,21 +37,23 @@
 
 \makecvfooter
 {\textsc{\today}} % \selectlanguage{english}\today
-{\textsc{Leonhard Kellerer - CV}}
+{\textsc{Leonhard Kellerer -- CV}}
 {\thepage}
 
 % TODO: include personal projects?
 % TODO: include personal website?
 % TODO: Kulturklub (Extracurricular Activities)
 % TODO: languages into two-column (together with skills?)
-% TODO: Do i even need the headline? If i do, i should make it short!
-% TODO: include grades? international equivalent?
+% TODO: include headline?
+% TODO: icons or not?
+% TODO: Helvetica or SourceSansPro?
 
 \input{section_headline}
 \input{section_competences}
 \input{section_interests}
 \input{section_education}
 \input{section_theses}
+\newpage % TODO: hack
 \input{section_experience_short}
 \input{section_projects}
 \input{section_languages}

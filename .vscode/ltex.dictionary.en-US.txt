@@ -2,3 +2,4 @@ JAX-Fluids
 Kuramoto-Sivashinsky
 Bezgin
 WENO
+Galerkin

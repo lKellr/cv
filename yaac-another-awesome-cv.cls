@@ -381,7 +381,7 @@
 }
 
 % Resume part title definition
-\ifundef{\@noicon}{
+\ifundef{\@noicons}{
 	\newcommand\sectionTitle[2]{\section{\texorpdfstring{\color{accentcolor}#2\enspace \textsc{#1}}{#1}}}
 }
 {
@@ -498,6 +498,7 @@
 %   {<techno1>,<techno2>}
 \newcommand\project[4]{
 	\begin{minipage}[t]{\dimexpr(\linewidth) - 1.5em}
+		% \textbf{#1} \hfill \textsc{#2}\smallskip\\
 		\textbf{\textsc{#1}} \hfill \textsc{#2}\smallskip\\
 		\textit{#3}\\
 		#4\smallskip\\
@@ -515,11 +516,11 @@
 % }
 
 \newcommand*\twocolumnsection[2]{
-	\begin{minipage}[t]{\dimexpr(\linewidth/2) - 3em}
+	\begin{minipage}[t]{\dimexpr(\linewidth/2) - 1em}
 		#1
 	\end{minipage}
 	\hfill
-	\begin{minipage}[t]{\dimexpr(\linewidth/2) - 3em}
+	\begin{minipage}[t]{\dimexpr(\linewidth/2) - 1em}
 		#2
 	\end{minipage}
 }
@@ -533,12 +534,12 @@
 
 \newcommand*\referee[5]{
 	\hspace{1em}
-	\begin{minipage}[t]{\dimexpr(\linewidth/3) - 3em}
+	\begin{minipage}[t]{\dimexpr(\linewidth/2) - 3em} % TODO: adjust number of referees
 		\begin{tabular}{>{}l >{}l}
-			\multicolumn{2}{l}{\textbf{#1}}            \\
-			\multicolumn{2}{l}{\emph{#2}, \textsc{#3}} \\
-			\quad \mailSymbol & \href{mailto:#4}{#4}   \\
-			\quad \faPhone    & #5                     \\
+			\multicolumn{2}{l}{\textbf{#1}}                        \\
+			\multicolumn{2}{p{\linewidth}}{\emph{#2}, \textsc{#3}} \\
+			\quad \mailSymbol & \href{mailto:#4}{#4}               \\
+			\quad \faPhone    & #5                                 \\
 		\end{tabular}
 	\end{minipage}%
 }
